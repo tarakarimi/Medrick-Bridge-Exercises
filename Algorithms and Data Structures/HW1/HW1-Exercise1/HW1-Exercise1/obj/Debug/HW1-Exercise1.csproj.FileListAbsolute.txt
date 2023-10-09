@@ -1,6 +1,0 @@
-C:\Users\user\RiderProjects\HW1-Exercise1\HW1-Exercise1\bin\Debug\HW1_Exercise1.exe
-C:\Users\user\RiderProjects\HW1-Exercise1\HW1-Exercise1\bin\Debug\HW1_Exercise1.pdb
-C:\Users\user\RiderProjects\HW1-Exercise1\HW1-Exercise1\obj\Debug\HW1-Exercise1.csprojAssemblyReference.cache
-C:\Users\user\RiderProjects\HW1-Exercise1\HW1-Exercise1\obj\Debug\HW1-Exercise1.csproj.CoreCompileInputs.cache
-C:\Users\user\RiderProjects\HW1-Exercise1\HW1-Exercise1\obj\Debug\HW1_Exercise1.exe
-C:\Users\user\RiderProjects\HW1-Exercise1\HW1-Exercise1\obj\Debug\HW1_Exercise1.pdb
