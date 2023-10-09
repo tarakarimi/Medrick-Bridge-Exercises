@@ -18,5 +18,24 @@ public class Program
         {
             playerDataDictionary.Add(player.Username, player);
         }
+
+        bool isValidUser = false;
+
+        while (!isValidUser)
+        {
+            Console.Write("Enter username: ");
+            string userInput = Console.ReadLine();
+
+            if (playerDataDictionary.TryGetValue(userInput, out selectedPlayerData))
+            {
+                Console.WriteLine("Info for the selected player: ");
+                selectedPlayerData.Display();
+                isValidUser = true;
+            }
+            else
+            {
+                Console.WriteLine("Player not found. Please try again.");
+            }
+        }
     }
 }
