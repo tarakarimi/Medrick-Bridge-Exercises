@@ -19,4 +19,42 @@ class Player
         
         Moves = moves;
     }
+
+    public void Move(string direction, int mapRows, int mapCols)
+    {
+        switch (direction.ToLower())
+        {
+            case "up":
+                if (Row > 0)
+                {
+                    Row--;
+                    Moves--;
+                }
+                break;
+            case "down":
+                if (Row < mapRows - 1)
+                {
+                    Row++;
+                    Moves--;
+                }
+                break;
+            case "left":
+                if (Col > 0)
+                {
+                    Col--;
+                    Moves--;
+                }
+                break;
+            case "right":
+                if (Col < mapCols - 1)
+                {
+                    Col++;
+                    Moves--;
+                }
+                break;
+            default:
+                Console.WriteLine("Enter a valid direction!!!!!!");
+                break;
+        }
+    }
 }
