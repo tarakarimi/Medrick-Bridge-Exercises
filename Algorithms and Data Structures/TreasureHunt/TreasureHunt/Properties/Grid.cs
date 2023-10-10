@@ -29,5 +29,33 @@ class Grid
                 map[row, col] = random.Next(10, 100);
             }
         }
+
+        FindTreasureAndTrapLocation();
+    }
+
+    private void FindTreasureAndTrapLocation()
+    {
+        int maxCellValue = -1;
+        int minCellValue = 100;
+
+        for (int row = 0; row < Rows; row++)
+        {
+            for (int col = 0; col < Cols; col++)
+            {
+                if (map[row, col] > maxCellValue)
+                {
+                    maxCellValue = map[row, col];
+                    TreasureRow = row;
+                    TreasureCol = col;
+                }
+
+                if (map[row, col] < minCellValue)
+                {
+                    minCellValue = map[row, col];
+                    DeathTrapRow = row;
+                    DeathTrapCol = col;
+                }
+            }
+        }
     }
 }
