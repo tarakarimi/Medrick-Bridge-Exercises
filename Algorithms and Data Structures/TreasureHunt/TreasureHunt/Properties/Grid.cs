@@ -58,4 +58,31 @@ class Grid
             }
         }
     }
+    
+    public void PrintMap(int playerRow, int playerCol, bool cheatMode)
+    {
+        for (int i = 0; i < Rows; i++)
+        {
+            for (int j = 0; j < Cols; j++)
+            {
+                if (i == playerRow && j == playerCol)
+                {
+                    Console.Write("[P] ");
+                }
+                else
+                {
+                    if (cheatMode && i == TreasureRow && j == TreasureCol)
+                    {
+                        Console.Write("[T] ");
+                    }
+                    else
+                    {
+                        Console.Write("[*] ");
+                    }
+                }
+            }
+
+            Console.WriteLine();
+        }
+    }
 }
