@@ -15,5 +15,19 @@ class Grid
     {
         Rows = rows;
         Cols = cols;
+        Initialize();
+    }
+
+    private void Initialize()
+    {
+        map = new int[Rows, Cols];
+
+        for (int row = 0; row < Rows; row++)
+        {
+            for (int col = 0; col < Cols; col++)
+            {
+                map[row, col] = random.Next(10, 100);
+            }
+        }
     }
 }
