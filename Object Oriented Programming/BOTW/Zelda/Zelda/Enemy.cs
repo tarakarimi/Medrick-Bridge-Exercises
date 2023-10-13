@@ -21,4 +21,30 @@ public class Enemy
         Damage = damage;
         EffectiveWeapons = effectiveWeapons ?? Array.Empty<string>();
     }
+    
+    public virtual void Attack()
+    {
+        Console.WriteLine($"{Name} attacks for {Damage} damage");
+    }
+    
+    public virtual void TakeDamage(int amount)
+    {
+        Health -= amount;
+        Console.WriteLine($"{Name} takes {amount} damage. Remaining health: {Health}");
+    }
+    
+    public virtual void Move(double speed)
+    {
+        Console.WriteLine($"{Name} is moving at speed {speed}.");
+    }
+    
+    public void DisplayInfo()
+    {
+        Console.WriteLine($"Name: {Name}");
+        Console.WriteLine($"Gender: {Gender}");
+        Console.WriteLine($"Race: {Race}");
+        Console.WriteLine($"Health: {Health}");
+        Console.WriteLine($"Threat Level: {Threat}/10");
+        Console.WriteLine($"Effective Weapons: {string.Join(", ", EffectiveWeapons)}");
+    }
 }
